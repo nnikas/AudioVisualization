@@ -1,26 +1,35 @@
-var audioFile;
+const NUM_BINS = 1024;
+const WIDTH = 800;
+const HEIGHT = 400;
 
-function preload(){
-    audioFile =  loadSound('What So Not - High You Are (Branchez Remix).mp3');
-}
+var xScale = d3.scale.linear()
+    .domain([0, NUM_BINS])
+    .range([0, WIDTH]);
 
-function setup(){
-    createCanvas(800, 400);
+var yScale = d3.scale.linear()
+    .domain([-1, 1])
+    .range([HEIGHT, 0]);
+
+function setup() {
+    createCanvas(WIDTH, HEIGHT);
     audioFile.loop();
-    
-
+    analyzer = new p5.FFT(1, NUM_BINS);
 }
-function draw(){
+
+function draw() {
+    var waveform = analyzer.waveform();
+
     background(0);
-    fill(255);
-    ellipse(800/2,400/2, 50, 50);
-}
+    noFill();
+    beginShape();
+    stroke(255);
+    strokeWeight(2);
+    for (var i = 0; i < NUM_BINS; i++) {
+        var x = xScale(i);
+        var y = yScale(waveform[i]);
+        vertex(x, y);
+    }
+    endShape();
 
-function keyPressed(){
-    if (audioFile.isPlaying()){
-        audioFile.pause();
-    }
-    else {
-        audioFile.play();
-    }
+
 }
