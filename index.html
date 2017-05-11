@@ -24,7 +24,22 @@
     <script src="lib/p5.js"></script>
     <script src="lib/p5.sound.js"></script>
     <script src="setup.js"></script>
-    <script src="visual/waveform.js"></script>
+
+    
+    <script>
+        function keyPressed(){
+            var s = document.createElement('script');
+            s.type = "text/javascript";
+            s.async = false;
+            if (key==='w'){
+                s.src = "visual/waveform.js";
+            }
+            else if (key==='s'){
+                s.src = "visual/waveform.js"
+
+            }
+        }
+    </script>
 
    <!-- <script>
         function loadVisualizerScript(visualizer) {
