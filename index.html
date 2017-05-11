@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <style type="text/css">
+        html, body {
+            background: #000;
+        }
+        canvas {
+            display: block;
+            margin: 120px auto 0;
+        }
+        #p5_loading {
+            color: #fff;
+            font-family: monospace;
+            left: calc(50% - 50px);
+            top: 50%;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <script src="p5.js"></script>
-    <script src="p5.sound.js"></script>
-    <script src = "visualizer.js"></script>
-    
+    <script src="lib/d3.js"></script>
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.sound.js"></script>
+    <script src="setup.js"></script>
+
+    <script>
+        function loadVisualizerScript(visualizer) {
+            var s = document.createElement('script');
+            s.src =  visualizer + ".js";
+            s.type = "text/javascript";
+            s.async = false;
+            document.querySelector('body').appendChild(s);
+        }
+        if (window.location.hash) {
+            loadVisualizerScript(window.location.hash.slice(1));
+        }
+    </script>
 </body>
 </html>
