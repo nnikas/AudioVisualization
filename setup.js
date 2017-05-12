@@ -1,6 +1,6 @@
 "use strict";
 
-var body = document.getElementsByTagName('BODY')[0];
+var body = document.getElementsByTagName("BODY")[0];
 var s = document.createElement("script");
 s.type = "text/javascript";
 
@@ -18,7 +18,7 @@ function preload() {
 }
 
 function keyPressed() {
-var head = document.getElementsByTagName('BODY')[0];
+var head = document.getElementsByTagName("BODY")[0];
 var s = document.createElement("script");
 s.type = "text/javascript";
 	
