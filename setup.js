@@ -1,6 +1,6 @@
 "use strict";
 
-var head = document.getElementsByTagName('head')[0];
+var body = document.getElementsByTagName('BODY')[0];
 var s = document.createElement("script");
 s.type = "text/javascript";
 
@@ -18,7 +18,7 @@ function preload() {
 }
 
 function keyPressed() {
-var head = document.getElementsByTagName('head')[0];
+var head = document.getElementsByTagName('BODY')[0];
 var s = document.createElement("script");
 s.type = "text/javascript";
 	
@@ -30,12 +30,12 @@ s.type = "text/javascript";
             audioFile.play();
         }
     }   
-    if (key === 'w'){
+    else if (key === 'w'){
 			s.src = "visual/spectrum.js";
 	}
 	else{
 			s.src = "visual/waveform.js";
 	}
-   head.appendChild(s); 
+   BODY.appendChild(s); 
 }
 
