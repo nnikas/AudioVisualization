@@ -1,6 +1,6 @@
 "use strict";
 
-var body = document.getElementsByTagName("BODY")[0];
+var body = document.getElementsByTagName("body")[0];
 var s = document.createElement("script");
 s.type = "text/javascript";
 
@@ -18,9 +18,6 @@ function preload() {
 }
 
 function keyPressed() {
-var head = document.getElementsByTagName("BODY")[0];
-var s = document.createElement("script");
-s.type = "text/javascript";
 	
     if (key === " ") {
         if (audioFile.isPlaying()) {
@@ -36,6 +33,6 @@ s.type = "text/javascript";
 	else{
 			s.src = "visual/waveform.js";
 	}
-   BODY.appendChild(s); 
+   body.appendChild(s); 
 }
 
