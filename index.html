@@ -24,12 +24,26 @@
     <script src="lib/p5.js"></script>
     <script src="lib/p5.sound.js"></script>
     <script src="setup.js"></script>
-    <script src="visual/spectrum.js"></script>
-    
-    
-    
 
-   
+    <script>
+	var head = document.getElementsByTagName('head')[0];
+	var js = document.createElement("script");
+
+	js.type = "text/javascript";
+	function keyPressed(){
+		if (key === 'w')
+		{
+			js.src = "visual/spectrum.js";
+		}
+		else
+		{
+			js.src = "visual/waveform.js";
+		}
+
+		head.appendChild(js);
+	}
+
+	</script>
 
     
     <!-- <script>
