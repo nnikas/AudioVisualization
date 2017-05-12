@@ -1,5 +1,11 @@
 "use strict";
 
+var head = document.getElementsByTagName('head')[0];
+var js = document.createElement("script");
+js.type = "text/javascript";
+
+	
+
 const AUDIO_SOURCES = [
     'What So Not - High You Are (Branchez Remix).mp3',
 ];
@@ -19,5 +25,13 @@ function keyPressed() {
         else {
             audioFile.play();
         }
-    }
+    }   
+    if (key === 'w'){
+			js.src = "visual/spectrum.js";
+	}
+	else{
+			js.src = "visual/waveform.js";
+	}
+    
 }
+head.appendChild(js);
