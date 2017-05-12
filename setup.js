@@ -18,6 +18,10 @@ function preload() {
 }
 
 function keyPressed() {
+var head = document.getElementsByTagName('head')[0];
+var s = document.createElement("script");
+s.type = "text/javascript";
+	
     if (key === " ") {
         if (audioFile.isPlaying()) {
             audioFile.pause();
