@@ -1,8 +1,8 @@
 "use strict";
 
 var head = document.getElementsByTagName('head')[0];
-var js = document.createElement("script");
-js.type = "text/javascript";
+var s = document.createElement("script");
+s.type = "text/javascript";
 
 	
 
@@ -27,11 +27,11 @@ function keyPressed() {
         }
     }   
     if (key === 'w'){
-			js.src = "visual/spectrum.js";
+			s.src = "visual/spectrum.js";
 	}
 	else{
-			js.src = "visual/waveform.js";
+			s.src = "visual/waveform.js";
 	}
-    
+   head.appendChild(s); 
 }
-head.appendChild(js);
+
