@@ -14,7 +14,7 @@ function setup() {
 function draw() {
     var spectrum = analyzer.analyze();
 
-    background(0);
+    background(51, 153, 255);
     rectMode(CORNERS);
     noStroke();
     for (var i = 0; i < NUM_BINS; i++) {
