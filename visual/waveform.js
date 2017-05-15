@@ -28,10 +28,14 @@ function draw() {
     beginShape();
     stroke(255);
     strokeWeight(2);
+
+
     for (var i = 0; i < NUM_BINS; i++) {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
+        var binFill = colorScale(i);
+        fill(binFill);
     }
     endShape();
 
