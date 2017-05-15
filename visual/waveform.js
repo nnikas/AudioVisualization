@@ -2,6 +2,10 @@ const NUM_BINS = 1024;
 const WIDTH = 800;
 const HEIGHT = 400;
 
+var colorScale = d3.scale.linear()
+    .domain([0, NUM_BINS / 2, NUM_BINS])
+    .range(['#FF4E50', '#FC913A', '#F9D423']);
+
 var xScale = d3.scale.linear()
     .domain([0, NUM_BINS])
     .range([0, WIDTH]);
