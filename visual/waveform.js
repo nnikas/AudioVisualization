@@ -23,7 +23,7 @@ function setup() {
 function draw() {
     var waveform = analyzer.waveform();
 
-    background(0);
+    background(51, 153, 255);
     noFill();
     beginShape();
     stroke(255);
