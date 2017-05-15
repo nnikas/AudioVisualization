@@ -24,7 +24,6 @@ function draw() {
     var waveform = analyzer.waveform();
 
     background(51, 153, 255);
-    noFill();
     beginShape();
     stroke(255);
     strokeWeight(2);
