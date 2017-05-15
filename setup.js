@@ -1,21 +1,11 @@
 "use strict";
 
-/* Tried creating a condition where pressing different keys switched between visual js files but couldn't get it to function
-var body = document.getElementsByTagName("body")[0];
-var s = document.createElement("script");
-s.type = "text/javascript";
-    else if (key === 'w'){
-			s.src = "visual/spectrum.js";
-	}
-	else{
-			s.src = "visual/waveform.js";
-	}
-   body.appendChild(s); 
-*/
-
 // Load songs
 const AUDIO_SOURCES = [
-    'What So Not - High You Are (Branchez Remix).mp3',
+	'songs/04 Sorry.mp3',
+	'songs/11 Dust.mp3',
+	'songs/Cry(just A Little.mp3',
+	'songs/Xxplosive.mp3'
 ];
 
 var audioFile, analyzer;
