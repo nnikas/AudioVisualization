@@ -1,9 +1,9 @@
-const NUM_BINS = 32;
+const NUM_BINS = 1024;
 const WIDTH = 800;
 const HEIGHT = 400;
 
 var colorScale = d3.scale.linear()
-    .domain([0, NUM_BINS / 2, NUM_BINS])
+    .domain([0, 16, 32])
     .range(['#FF4E50', '#FC913A', '#F9D423']);
 
 var xScale = d3.scale.linear()
@@ -17,7 +17,7 @@ var yScale = d3.scale.linear()
 function setup() {
     createCanvas(WIDTH, HEIGHT);
     audioFile.loop();
-    analyzer = new p5.FFT(1, NUM_BINS);
+    analyzer = new p5.FFT(.3, NUM_BINS);
 }
 
 function draw() {
@@ -33,6 +33,9 @@ function draw() {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
+        
+    }
+    for (var i = 0; i<32; i++){
         var binFill = colorScale(i);
         fill(binFill);
     }
