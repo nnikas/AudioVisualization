@@ -1,4 +1,4 @@
-const NUM_BINS = 800;
+const NUM_BINS = 32;
 const WIDTH = 800;
 const HEIGHT = 400;
 
