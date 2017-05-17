@@ -17,7 +17,7 @@ var yScale = d3.scale.linear()
 function setup() {
     createCanvas(WIDTH, HEIGHT);
     audioFile.loop();
-    analyzer = new p5.FFT(.01, NUM_BINS);
+    analyzer = new p5.FFT(1, NUM_BINS);
 }
 
 function draw() {
