@@ -3,7 +3,7 @@ const WIDTH = 800;
 const HEIGHT = 400;
 
 var colorScale = d3.scale.linear()
-    .domain([0, 16, NUM_BINS])
+    .domain([0, NUM_BINS/2, NUM_BINS])
     .range(['#FF4E50', '#FC913A', '#F9D423']);
 
 var xScale = d3.scale.linear()
@@ -30,7 +30,7 @@ function draw() {
     //nofill();
 
 
-    for (var i = 0; i < NUM_BINS; i+=.1) {
+    for (var i = 0; i < NUM_BINS; i+=.5) {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
