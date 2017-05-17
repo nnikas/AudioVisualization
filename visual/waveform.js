@@ -25,12 +25,12 @@ function draw() {
 
     background(51, 153, 255);
     beginShape();
-    stroke(233,0,0);
+    stroke(232,0,0);
     strokeWeight(2);
-    fill(0);
+    nofill();
 
 
-    for (var i = 0; i < NUM_BINS; i+=.1) {
+    for (var i = 0; i < NUM_BINS; i+=.001) {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
