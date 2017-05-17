@@ -25,7 +25,7 @@ function draw() {
 
     background(51, 153, 255);
     beginShape();
-    stroke(255,51,153);
+    stroke(255);
     strokeWeight(2);
     //nofill();
 
@@ -34,8 +34,8 @@ function draw() {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
-        //var binFill = colorScale(i);
-        //fill(binFill);
+        var binFill = colorScale(i);
+        fill(binFill);
         
     }
 
