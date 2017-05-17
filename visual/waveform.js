@@ -11,13 +11,13 @@ var xScale = d3.scale.linear()
     .range([0, WIDTH]);
 
 var yScale = d3.scale.linear()
-    .domain([-.5, .5])
+    .domain([-1, 1])
     .range([HEIGHT, 0]);
 
 function setup() {
     createCanvas(WIDTH, HEIGHT);
     audioFile.loop();
-    analyzer = new p5.FFT(1, NUM_BINS);
+    analyzer = new p5.FFT(.7, NUM_BINS);
 }
 
 function draw() {
@@ -29,12 +29,12 @@ function draw() {
     strokeWeight(2);
 
 
-    for (var i = 0; i < NUM_BINS; i++) {
+    for (var i = 0; i < NUM_BINS; i+=.5) {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
-        var binFill = colorScale(i);
-        fill(binFill);
+        //var binFill = colorScale(i);
+        //fill(binFill);
         
     }
 
