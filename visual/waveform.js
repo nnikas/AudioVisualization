@@ -7,11 +7,11 @@ var colorScale = d3.scale.linear()
     .range(['#FF4E50', '#FC913A', '#F9D423']);
 
 var xScale = d3.scale.linear()
-    .domain([0, 900])
+    .domain([0, NUM_BINS])
     .range([0, WIDTH]);
 
 var yScale = d3.scale.linear()
-    .domain([-1, 1])
+    .domain([-.5, .5])
     .range([HEIGHT, 0]);
 
 function setup() {
