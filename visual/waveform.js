@@ -7,7 +7,7 @@ var colorScale = d3.scale.linear()
     .range(['#FF4E50', '#FC913A', '#F9D423']);
 
 var xScale = d3.scale.linear()
-    .domain([0, NUM_BINS])
+    .domain([0, 900])
     .range([0, WIDTH]);
 
 var yScale = d3.scale.linear()
