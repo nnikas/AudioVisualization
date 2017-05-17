@@ -25,9 +25,9 @@ function draw() {
 
     background(51, 153, 255);
     beginShape();
-    stroke(232,0,0);
+    stroke(255,51,153);
     strokeWeight(2);
-    nofill();
+    //nofill();
 
 
     for (var i = 0; i < NUM_BINS; i+=.1) {
