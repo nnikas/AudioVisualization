@@ -30,7 +30,7 @@ function draw() {
     //nofill();
 
 
-    for (var i = 0; i < NUM_BINS; i+=.5) {
+    for (var i = 0; i < NUM_BINS; i++) {
         var x = xScale(i);
         var y = yScale(waveform[i]);
         vertex(x, y);
